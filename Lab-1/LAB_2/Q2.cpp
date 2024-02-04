@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 #define rep(i, a, b) for (int i = a; i < b; ++i)
 #define all(v) v.begin(), v.end()
 typedef long long ll;
@@ -40,7 +39,7 @@ void inplace_merge1(int* start, int m, int* end){
 //     int i=0,j=m,k=-1,n=(end - start);
 //     while( )
 //     {
-//         if( (start+i)<=(start+j) ) i++;
+//         if( *(start+i)<=*(start+j) ) i++;
 //         else
 //         {
 //             int a = *(start+i); 
@@ -82,5 +81,6 @@ int main()
 
     cout<<"before merging is_sorted value of array : "<<is_sorted(b,b+n)<<"\n"; // before merging
     inplace_merge1(b,m,b+n);
+    rep(i,0,n){cout<<b[i]<<" ";}cout<<"\n";
     cout<<"after merging is_sorted value of array : "<<is_sorted(b,b+n)<<"\n"; // after merging
 }
