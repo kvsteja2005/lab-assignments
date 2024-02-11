@@ -1,2 +1,2 @@
-The median element is  :279
+Median element is 279
 279

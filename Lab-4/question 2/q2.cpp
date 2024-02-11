@@ -38,12 +38,12 @@ int main(){
     }
 
     if((m+n)%2){
-        cout<<"The median element is  :"<<res[(m+n)/2]<<endl;
+        cout<<"Median element is "<<res[(m+n)/2]<<endl;
 
         cout<<float(res[(m+n)/2]);
     }
     else{
-        cout<<"The median elements are : "<<res[(m+n)/2-1]<< " and "<<res[(m+n)/2]<<endl;
+        cout<<"Median elements are "<<res[(m+n)/2-1]<< " , "<<res[(m+n)/2]<<endl;
         cout<<float((res[(m+n)/2-1]+res[(m+n)/2]))/2;      
     }
 

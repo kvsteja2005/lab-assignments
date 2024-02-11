@@ -1,2 +1,2 @@
- Number of inversions are (by brute force)25162694
- Number of inversions are (by optimal way)25162694
+ No.of inversions by brute force method 25162694
+ No.of inversions by optimal method 25162694

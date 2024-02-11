@@ -17,24 +17,24 @@ int brute_force(int arr[], int n){
     return ans;
 }
 
-int _mergeSort(int arr[], int temp[], int left, int right);
+int ms(int arr[], int temp[], int left, int right);
 int merge(int arr[], int temp[], int left, int mid,
 		int right);
 
 int mergeSort(int arr[], int array_size)
 {
 	int temp[array_size];
-	return _mergeSort(arr, temp, 0, array_size - 1);
+	return ms(arr, temp, 0, array_size - 1);
 }
 
-int _mergeSort(int arr[], int temp[], int left, int right)
+int ms(int arr[], int temp[], int left, int right)
 {
 	int mid, inv_count = 0;
 	if (right > left) {
 		mid = (right + left) / 2;
 
-		inv_count += _mergeSort(arr, temp, left, mid);
-		inv_count += _mergeSort(arr, temp, mid + 1, right);
+		inv_count += ms(arr, temp, left, mid);
+		inv_count += ms(arr, temp, mid + 1, right);
 
 		inv_count += merge(arr, temp, left, mid + 1, right);
 	}
@@ -87,8 +87,8 @@ int main()
         cin >> arr[i];
     }
 
-    cout << " Number of inversions are (by brute force)" << brute_force(arr, n) << endl;
-	cout << " Number of inversions are (by optimal way)" << mergeSort(arr, n);
+    cout << " No.of inversions by brute force method " << brute_force(arr, n) << endl;
+	cout << " No.of inversions by optimal method " << mergeSort(arr, n);
 	return 0;
 }
 
